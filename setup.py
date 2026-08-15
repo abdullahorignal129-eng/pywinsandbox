@@ -23,7 +23,6 @@ setup(name='pywinsandbox',
           'yattag',
           'rpyc',
           'cached-property',
-          'recordclass',
           'IPython',
           'wmi'
       ],
