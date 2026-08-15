@@ -1,9 +1,10 @@
-from recordclass import recordclass
+from dataclasses import dataclass
+from typing import Optional, List
 
-SandboxConfig = recordclass("SandboxConfig", [
-    'folder_mappers',
-    'networking',
-    'logon_script',
-    'virtual_gpu',
-    'memory_mb'
-])
+@dataclass
+class SandboxConfig:
+    folder_mappers: Optional[List] = None
+    networking: bool = True
+    logon_script: Optional[str] = None
+    virtual_gpu: bool = True
+    memory_mb: Optional[int] = None
